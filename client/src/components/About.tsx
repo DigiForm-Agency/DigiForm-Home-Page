@@ -1,14 +1,6 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Users, Award, Target } from "lucide-react";
 import teamImage from "@assets/generated_images/About_us_team_photo_a00c0571.png";
 
 export default function About() {
-  const stats = [
-    { icon: Users, label: "Clients Served", value: "50+" },
-    { icon: Award, label: "Years Experience", value: "8+" },
-    { icon: Target, label: "Success Rate", value: "95%" }
-  ];
-
   return (
     <section className="py-16 md:py-24 bg-background" id="about">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
@@ -52,25 +44,6 @@ export default function About() {
                 measurable results. We're not just service providers—we're your long-term partners 
                 in growth.
               </p>
-            </div>
-            
-            <div className="grid grid-cols-3 gap-4 pt-4">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <Card key={index} data-testid={`card-stat-${index}`}>
-                    <CardContent className="p-6 text-center">
-                      <Icon className="w-8 h-8 text-primary mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-foreground mb-1">
-                        {stat.value}
-                      </div>
-                      <div className="text-xs text-muted-foreground">
-                        {stat.label}
-                      </div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
             </div>
           </div>
         </div>

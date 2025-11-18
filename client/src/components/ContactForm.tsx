@@ -8,7 +8,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const serviceOptions = [
@@ -229,24 +229,12 @@ export default function ContactForm() {
                 <CardTitle className="text-lg">Contact Information</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="flex items-start gap-3" data-testid="contact-location">
-                  <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                  <div>
-                    <p className="font-medium text-sm">Office Location</p>
-                    <p className="text-sm text-muted-foreground">
-                      123 Main Street<br />
-                      Suite 200<br />
-                      Your City, ST 12345
-                    </p>
-                  </div>
-                </div>
-                
                 <div className="flex items-start gap-3" data-testid="contact-phone">
                   <Phone className="w-5 h-5 text-primary mt-0.5" />
                   <div>
                     <p className="font-medium text-sm">Phone</p>
                     <p className="text-sm text-muted-foreground">
-                      (555) 123-4567
+                      858-344-4585
                     </p>
                   </div>
                 </div>
@@ -255,19 +243,8 @@ export default function ContactForm() {
                   <Mail className="w-5 h-5 text-primary mt-0.5" />
                   <div>
                     <p className="font-medium text-sm">Email</p>
-    <p className="text-sm text-muted-foreground">
-                      hello@digiform.com
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3" data-testid="contact-hours">
-                  <Clock className="w-5 h-5 text-primary mt-0.5" />
-                  <div>
-                    <p className="font-medium text-sm">Business Hours</p>
                     <p className="text-sm text-muted-foreground">
-                      Mon-Fri: 9:00 AM - 6:00 PM<br />
-                      Sat-Sun: Closed
+                      hello@digiform.com
                     </p>
                   </div>
                 </div>
