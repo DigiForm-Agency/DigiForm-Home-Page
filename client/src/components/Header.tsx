@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import logoImage from "@assets/generated_images/DigiForm_minimalistic_logo_design_a7cc37b4.png";
 
 export default function Header() {
   const scrollToSection = (id: string) => {
@@ -11,14 +10,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <img 
-              src={logoImage} 
-              alt="DigiForm" 
-              className="h-8 w-auto"
-              data-testid="logo-digiform"
-            />
-            <span className="text-xl font-bold text-foreground">DigiForm</span>
+          <div className="flex items-center">
+            <span className="text-xl font-bold text-foreground" data-testid="logo-digiform">DigiForm</span>
           </div>
           
           <nav className="hidden md:flex items-center gap-6">
