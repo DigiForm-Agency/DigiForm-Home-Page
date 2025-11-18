@@ -255,8 +255,8 @@ export default function ContactForm() {
                   <Mail className="w-5 h-5 text-primary mt-0.5" />
                   <div>
                     <p className="font-medium text-sm">Email</p>
-                    <p className="text-sm text-muted-foreground">
-                      hello@youragency.com
+    <p className="text-sm text-muted-foreground">
+                      hello@digiform.com
                     </p>
                   </div>
                 </div>

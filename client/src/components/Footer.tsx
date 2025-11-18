@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="font-bold text-lg mb-4">Your Agency</h3>
+            <h3 className="font-bold text-lg mb-4">DigiForm</h3>
             <p className="text-sm text-muted-foreground mb-4">
               Transforming local businesses through modern digital solutions.
             </p>
@@ -95,7 +95,7 @@ export default function Footer() {
         
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Your Agency. All rights reserved.
+            © 2024 DigiForm. All rights reserved.
           </p>
           <div className="flex gap-6">
             <button className="text-sm text-muted-foreground hover:text-foreground transition-colors">
