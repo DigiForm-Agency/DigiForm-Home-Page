@@ -14,7 +14,8 @@ import { useToast } from "@/hooks/use-toast";
 const serviceOptions = [
   { id: "web-design", label: "Website Design & Development" },
   { id: "maintenance", label: "Website Maintenance & Hosting" },
-  { id: "local-seo", label: "Local SEO & Optimization" }
+  { id: "local-seo", label: "Local SEO & Optimization" },
+  { id: "photography", label: "On-Site Photography (Add-On)" }
 ];
 
 export default function ContactForm() {

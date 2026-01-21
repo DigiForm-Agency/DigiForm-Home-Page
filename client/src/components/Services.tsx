@@ -1,4 +1,4 @@
-import { Globe, Server, MapPin } from "lucide-react";
+import { Globe, Server, MapPin, Camera } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const services = [
@@ -33,6 +33,18 @@ const services = [
       "Local keywords",
       "Contact & map setup"
     ]
+  },
+  {
+    icon: Camera,
+    title: "On-Site Photography (Add-On)",
+    description: "Simple, professional on-site photography to elevate your website and build trust with customers.",
+    benefits: [
+      "Up to 1-hour on-site photoshoot",
+      "Interior, exterior, product, or workspace shots",
+      "Natural, lifestyle-style images (not overly posed)",
+      "15-30 edited photos optimized for web use",
+      "Planned specifically to support your website content"
+    ]
   }
 ];
 
@@ -49,7 +61,7 @@ export default function Services() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
