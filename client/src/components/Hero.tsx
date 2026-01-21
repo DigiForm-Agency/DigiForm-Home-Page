@@ -19,11 +19,10 @@ export default function Hero() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 py-24 text-center">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-          Modernize Your Business<br />for the Digital Age
+          Helping local businesses grow online.
         </h1>
         <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
-          We help local small and medium businesses transform their online presence through 
-          cutting-edge web design, AI automation, and strategic digital marketing.
+          We design and maintain modern websites, with smart automation where it counts, so you can spend less time worrying about your website and more time running your business.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Button 
