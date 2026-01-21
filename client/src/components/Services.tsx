@@ -1,49 +1,37 @@
-import { Globe, Bot, Zap, Share2 } from "lucide-react";
+import { Globe, Server, MapPin } from "lucide-react";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 
 const services = [
   {
     icon: Globe,
-    title: "Web Design",
-    description: "Beautiful, responsive websites that convert visitors into customers.",
+    title: "Website Design & Development",
+    description: "Clean, mobile-friendly websites built to convert visitors into customers.",
     benefits: [
-      "Mobile-first responsive design",
-      "Fast loading performance",
-      "SEO optimized structure",
-      "Easy content management"
+      "Mobile-first",
+      "Fast loading",
+      "Easy to update",
+      "Built for Google"
     ]
   },
   {
-    icon: Bot,
-    title: "AI for Admin Tasks",
-    description: "Automate repetitive tasks and streamline your operations with AI.",
+    icon: Server,
+    title: "Website Maintenance & Hosting",
+    description: "We keep your website running, secure, and up to date.",
     benefits: [
-      "Intelligent document processing",
-      "Automated customer responses",
-      "Smart scheduling systems",
-      "Data analysis and insights"
+      "Hosting & monitoring",
+      "Small updates included",
+      "Backups",
+      "Security updates"
     ]
   },
   {
-    icon: Zap,
-    title: "Business Automation",
-    description: "Connect your tools and automate workflows to save time and reduce errors.",
+    icon: MapPin,
+    title: "Local SEO & Optimization",
+    description: "Help customers find you online.",
     benefits: [
-      "Payment processing automation",
-      "Inventory management systems",
-      "Customer relationship tools",
-      "Automated reporting"
-    ]
-  },
-  {
-    icon: Share2,
-    title: "Social Media Management",
-    description: "Engage your audience and grow your brand across all platforms.",
-    benefits: [
-      "Content strategy and planning",
-      "Multi-platform scheduling",
-      "Audience engagement",
-      "Performance analytics"
+      "Google Business integration",
+      "Local keywords",
+      "Contact & map setup"
     ]
   }
 ];
@@ -61,7 +49,7 @@ export default function Services() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

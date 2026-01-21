@@ -12,10 +12,9 @@ import { Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const serviceOptions = [
-  { id: "web-design", label: "Web Design" },
-  { id: "ai-automation", label: "AI for Admin Tasks" },
-  { id: "business-automation", label: "Business Automation" },
-  { id: "social-media", label: "Social Media Management" }
+  { id: "web-design", label: "Website Design & Development" },
+  { id: "maintenance", label: "Website Maintenance & Hosting" },
+  { id: "local-seo", label: "Local SEO & Optimization" }
 ];
 
 export default function ContactForm() {
