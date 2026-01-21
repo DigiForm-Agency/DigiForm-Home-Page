@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@assets/generated_images/Hero_background_team_workspace_075e61f3.png";
+import heroImage from "@assets/digiform_1768975948681.png";
 
 export default function Hero() {
   const scrollToContact = () => {
