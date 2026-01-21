@@ -9,7 +9,7 @@ export default function About() {
             About Us
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Your trusted partner in digital transformation
+            Your trusted partner in <strong>digi</strong>tal trans<strong>form</strong>ation
           </p>
         </div>
         
@@ -25,24 +25,16 @@ export default function About() {
           <div className="order-1 lg:order-2 space-y-6">
             <div>
               <h3 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
-                Empowering Local Businesses Since 2016
+                Websites that help local businesses get more customers.
               </h3>
               <p className="text-base text-muted-foreground mb-4">
-                We're a team of passionate digital strategists, designers, and developers 
-                dedicated to helping small and medium businesses thrive in the digital age. 
-                Our mission is simple: make cutting-edge technology accessible and affordable 
-                for local businesses.
+                We're a small, dedicated team based in North County San Diego, helping local businesses grow with clean, modern websites and reliable ongoing support.
               </p>
               <p className="text-base text-muted-foreground mb-4">
-                Unlike large agencies that treat you like a number, we take the time to 
-                understand your unique challenges and goals. We believe that every business 
-                deserves a professional online presence and efficient systems that help them 
-                compete with larger competitors.
+                With backgrounds in technology, marketing, and product strategy, we build websites that make it easy for customers to find you, understand your services, and take action.
               </p>
               <p className="text-base text-muted-foreground">
-                Our approach combines proven strategies with the latest technologies to deliver 
-                measurable results. We're not just service providers—we're your long-term partners 
-                in growth.
+                We care deeply about our neighborhood and love partnering with local businesses that want to continue thriving—online and off.
               </p>
             </div>
           </div>
