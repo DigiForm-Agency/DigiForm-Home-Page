@@ -11,7 +11,8 @@ const services = [
       "Fast loading",
       "Easy to update",
       "Built for Google"
-    ]
+    ],
+    pricing: "Starting at $1,000"
   },
   {
     icon: Server,
@@ -22,7 +23,8 @@ const services = [
       "Small updates included",
       "Backups",
       "Security updates"
-    ]
+    ],
+    pricing: "Starting at $75/month"
   },
   {
     icon: MapPin,
@@ -32,7 +34,8 @@ const services = [
       "Google Business integration",
       "Local keywords",
       "Contact & map setup"
-    ]
+    ],
+    pricing: "Quoted Separately"
   },
   {
     icon: Camera,
@@ -44,7 +47,8 @@ const services = [
       "Natural, lifestyle-style images (not overly posed)",
       "15-30 edited photos optimized for web use",
       "Planned specifically to support your website content"
-    ]
+    ],
+    pricing: "Quoted Separately"
   }
 ];
 
@@ -79,8 +83,8 @@ export default function Services() {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
+                <CardContent className="flex flex-col h-full">
+                  <ul className="space-y-2 flex-1">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="text-sm text-muted-foreground flex items-start">
                         <span className="text-primary mr-2">•</span>
@@ -88,6 +92,9 @@ export default function Services() {
                       </li>
                     ))}
                   </ul>
+                  <p className="text-sm font-semibold text-primary mt-4 pt-4 border-t">
+                    {service.pricing}
+                  </p>
                 </CardContent>
               </Card>
             );
