@@ -71,7 +71,7 @@ export default function Services() {
             return (
               <Card 
                 key={index} 
-                className="hover-elevate active-elevate-2"
+                className="hover-elevate active-elevate-2 flex flex-col h-full"
                 data-testid={`card-service-${index}`}
               >
                 <CardHeader>
@@ -83,7 +83,7 @@ export default function Services() {
                     {service.description}
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="flex flex-col h-full">
+                <CardContent className="flex flex-col flex-1">
                   <ul className="space-y-2 flex-1">
                     {service.benefits.map((benefit, idx) => (
                       <li key={idx} className="text-sm text-muted-foreground flex items-start">
