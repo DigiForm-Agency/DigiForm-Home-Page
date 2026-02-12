@@ -1,6 +1,5 @@
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Instagram, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export default function Footer() {
   const scrollToSection = (id: string) => {
@@ -15,22 +14,65 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">DigiForm</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              Transforming local businesses through modern digital solutions.
+              Helping local businesses grow online.
             </p>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground mb-2">
+              <Phone className="h-4 w-4 text-primary" />
+              <span>858-344-4585</span>
+            </div>
+            <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
+              <Mail className="h-4 w-4 text-primary" />
+              <span>hello@digiform.com</span>
+            </div>
             <div className="flex gap-2">
-              <Button size="icon" variant="ghost" data-testid="link-facebook">
-                <Facebook className="h-4 w-4" />
-              </Button>
-              <Button size="icon" variant="ghost" data-testid="link-twitter">
-                <Twitter className="h-4 w-4" />
-              </Button>
-              <Button size="icon" variant="ghost" data-testid="link-instagram">
-                <Instagram className="h-4 w-4" />
-              </Button>
-              <Button size="icon" variant="ghost" data-testid="link-linkedin">
-                <Linkedin className="h-4 w-4" />
+              <Button size="icon" variant="ghost" asChild data-testid="link-instagram">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="h-4 w-4" />
+                </a>
               </Button>
             </div>
+          </div>
+          
+          <div>
+            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li>
+                <button 
+                  onClick={() => scrollToSection("services")}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid="link-service-web"
+                >
+                  Website Design & Development
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("services")}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid="link-service-maintenance"
+                >
+                  Website Maintenance & Hosting
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("services")}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid="link-service-seo"
+                >
+                  Local SEO & Optimization
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection("services")}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  data-testid="link-service-photo"
+                >
+                  On-Site Photography
+                </button>
+              </li>
+            </ul>
           </div>
           
           <div>
@@ -74,37 +116,12 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="font-bold text-lg mb-4">Newsletter</h3>
-            <p className="text-sm text-muted-foreground mb-4">
-              Get digital marketing tips and local business insights.
-            </p>
-            <div className="flex gap-2">
-              <Input 
-                type="email" 
-                placeholder="your@email.com"
-                data-testid="input-newsletter-email"
-              />
-              <Button data-testid="button-subscribe">
-                Subscribe
-              </Button>
-            </div>
-          </div>
         </div>
         
         <div className="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 DigiForm. All rights reserved.
+            © {new Date().getFullYear()} DigiForm. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <button className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Privacy Policy
-            </button>
-            <button className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Terms of Service
-            </button>
-          </div>
         </div>
       </div>
     </footer>

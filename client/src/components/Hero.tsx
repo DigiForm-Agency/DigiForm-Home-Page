@@ -43,9 +43,6 @@ export default function Hero() {
             View Our Work
           </Button>
         </div>
-        <p className="mt-12 text-sm text-white/70 font-medium">
-          Trusted by 50+ local businesses
-        </p>
       </div>
     </section>
   );

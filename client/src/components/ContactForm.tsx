@@ -1,7 +1,8 @@
-import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import { insertInquirySchema, type InsertInquiry } from "@shared/schema";
+import { apiRequest } from "@/lib/queryClient";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -20,33 +21,41 @@ const serviceOptions = [
 
 export default function ContactForm() {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const form = useForm<InsertInquiry>({
     resolver: zodResolver(insertInquirySchema),
     defaultValues: {
       name: "",
       email: "",
-      phone: undefined,
-      businessName: undefined,
+      phone: "",
+      businessName: "",
       services: [],
       message: ""
     }
   });
 
-  const onSubmit = async (data: InsertInquiry) => {
-    setIsSubmitting(true);
-    console.log("Form submitted:", data);
-    
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Thank you for your inquiry!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    
-    form.reset();
-    setIsSubmitting(false);
+  const mutation = useMutation({
+    mutationFn: async (data: InsertInquiry) => {
+      await apiRequest("POST", "/api/inquiries", data);
+    },
+    onSuccess: () => {
+      toast({
+        title: "Thank you for your inquiry!",
+        description: "We'll get back to you within 24 hours.",
+      });
+      form.reset();
+    },
+    onError: () => {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const onSubmit = (data: InsertInquiry) => {
+    mutation.mutate(data);
   };
 
   return (
@@ -212,10 +221,10 @@ export default function ContactForm() {
                       type="submit" 
                       size="lg" 
                       className="w-full md:w-auto"
-                      disabled={isSubmitting}
+                      disabled={mutation.isPending}
                       data-testid="button-submit-inquiry"
                     >
-                      {isSubmitting ? "Sending..." : "Send Inquiry"}
+                      {mutation.isPending ? "Sending..." : "Send Inquiry"}
                     </Button>
                   </form>
                 </Form>
