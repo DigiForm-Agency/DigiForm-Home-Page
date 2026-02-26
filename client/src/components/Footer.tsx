@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
               <Mail className="h-4 w-4 text-primary" />
-              <span>hello@digiform.com</span>
+              <span>hello@digiform.agency</span>
             </div>
             <div className="flex gap-2">
               <Button size="icon" variant="ghost" asChild data-testid="link-instagram">

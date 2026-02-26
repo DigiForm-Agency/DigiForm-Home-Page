@@ -253,7 +253,7 @@ export default function ContactForm() {
                   <div>
                     <p className="font-medium text-sm">Email</p>
                     <p className="text-sm text-muted-foreground">
-                      hello@digiform.com
+                      hello@digiform.agency
                     </p>
                   </div>
                 </div>
