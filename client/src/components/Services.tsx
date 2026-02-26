@@ -12,7 +12,7 @@ const services = [
       "Easy to update",
       "Built for Google"
     ],
-    pricing: "Starting at $1,000"
+    pricing: "Starting at $1,200"
   },
   {
     icon: Server,
