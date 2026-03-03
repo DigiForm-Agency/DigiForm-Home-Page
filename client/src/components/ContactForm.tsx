@@ -38,16 +38,12 @@ export default function ContactForm() {
       const res = await fetch("https://formspree.io/f/mojnopyv", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, _gotcha: "" }),
       });
       if (!res.ok) throw new Error("Submission failed");
     },
     onSuccess: () => {
-      toast({
-        title: "Thank you for your inquiry!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      form.reset();
+      window.location.href = "/thank-you.html";
     },
     onError: () => {
       toast({
@@ -86,6 +82,7 @@ export default function ContactForm() {
               <CardContent>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                    <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
