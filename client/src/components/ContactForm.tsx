@@ -82,7 +82,7 @@ export default function ContactForm() {
               <CardContent>
                 <Form {...form}>
                   <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+                    <input type="text" name="_gotcha" style={{ position: "absolute", left: "-9999px", top: "auto", width: "1px", height: "1px", overflow: "hidden" }} tabIndex={-1} aria-hidden="true" />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <FormField
                         control={form.control}
@@ -92,7 +92,8 @@ export default function ContactForm() {
                             <FormLabel>Name *</FormLabel>
                             <FormControl>
                               <Input 
-                                placeholder="John Doe" 
+                                placeholder="John Doe"
+                                autoComplete="name"
                                 {...field} 
                                 data-testid="input-name"
                               />
@@ -111,7 +112,8 @@ export default function ContactForm() {
                             <FormControl>
                               <Input 
                                 type="email"
-                                placeholder="john@example.com" 
+                                placeholder="john@example.com"
+                                autoComplete="email"
                                 {...field} 
                                 data-testid="input-email"
                               />
