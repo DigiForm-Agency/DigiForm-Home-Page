@@ -1,5 +1,4 @@
-import { Instagram, Phone, Mail } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   const scrollToSection = (id: string) => {
@@ -23,13 +22,6 @@ export default function Footer() {
             <div className="flex items-center gap-3 text-sm text-muted-foreground mb-4">
               <Mail className="h-4 w-4 text-primary" />
               <span>hello@digiform.agency</span>
-            </div>
-            <div className="flex gap-2">
-              <Button size="icon" variant="ghost" asChild data-testid="link-instagram">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="h-4 w-4" />
-                </a>
-              </Button>
             </div>
           </div>
           
