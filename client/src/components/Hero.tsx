@@ -22,7 +22,7 @@ export default function Hero() {
           Helping local businesses grow online.
         </h1>
         <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8">
-          We design and maintain modern websites, with smart automation where it counts, so you can spend less time worrying about your website and more time running your business.
+          We design and maintain modern websites so you can spend less time worrying about your website and more time running your business.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
           <Button 
