@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import { insertInquirySchema, type InsertInquiry } from "@shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -36,7 +35,12 @@ export default function ContactForm() {
 
   const mutation = useMutation({
     mutationFn: async (data: InsertInquiry) => {
-      await apiRequest("POST", "/api/inquiries", data);
+      const res = await fetch("https://formspree.io/f/mojnopyv", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Submission failed");
     },
     onSuccess: () => {
       toast({
