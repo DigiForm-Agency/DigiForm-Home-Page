@@ -23,13 +23,6 @@ export default function Header() {
               Services
             </button>
             <button 
-              onClick={() => scrollToSection("portfolio")}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              data-testid="nav-portfolio"
-            >
-              Portfolio
-            </button>
-            <button 
               onClick={() => scrollToSection("about")}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               data-testid="nav-about"

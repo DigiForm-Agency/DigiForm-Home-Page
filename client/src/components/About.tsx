@@ -34,7 +34,7 @@ export default function About() {
                 With backgrounds in technology, marketing, and product strategy, we build websites that make it easy for customers to find you, understand your services, and take action.
               </p>
               <p className="text-base text-muted-foreground">
-                We care deeply about our neighborhood and love partnering with local businesses that want to continue thriving, online and off.
+                We care deeply about our work and love partnering with businesses that want to continue thriving, online and off.
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@ const services = [
       "Mobile-first",
       "Fast loading",
       "Easy to update",
-      "Built for Google"
+      "Built for Search Engines (Google, Bing, Safari, and more)"
     ],
     pricing: "Starting at $1,200"
   },
@@ -20,8 +20,8 @@ const services = [
     description: "We keep your website running, secure, and up to date.",
     benefits: [
       "Hosting & monitoring",
-      "Small updates included",
-      "Backups",
+      "Updates included",
+      "Media and content backups",
       "Security updates"
     ],
     pricing: "Starting at $75/month"
@@ -31,9 +31,9 @@ const services = [
     title: "Local SEO & Optimization",
     description: "Help customers find you online.",
     benefits: [
-      "Google Business integration",
+      "Content creation",
       "Local keywords",
-      "Contact & map setup"
+      "Online map setup (Yelp, Google Maps, and more)"
     ],
     pricing: "Quoted Separately"
   },
